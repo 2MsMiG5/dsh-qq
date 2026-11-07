@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Pixeval MCP Connection",
+    "description": "Connects the running Pixeval desktop app's built-in MCP server (127.0.0.1:52163/mcp) and exposes its 49 search, ranking, user, comment, bookmark and download tools as mcp__pixeval__* tools."
+  }
+}

@@ -1,0 +1,27 @@
+# Pixeval（Pixiv 桌面客户端，5.x）自带 MCP 服务端的 DSH 连接。
+#
+# 服务端事实（Pixeval 5.0.13，见 qq-bridge/docs/research/PIXEVAL_MCP_SPEC.md）：
+#   - Streamable HTTP，**stateless**（不发 Mcp-Session-Id），路径固定 /mcp
+#   - 只监听 127.0.0.1，默认端口 52163（Pixeval → 设置 → MCP 可改）
+#   - 无鉴权；服务端默认关闭，需要用户在 Pixeval 设置里打开「启用 MCP 服务器」
+#   - 49 个工具（38 只读 + 11 写入，写入还需 Pixeval 的「启用写入工具」开关）
+#   - 协议版本 2025-11-25（服务端支持 2024-11-05 / 2025-03-26 / 2025-06-18 / 2025-11-25）
+#
+# 连接行为：
+#   - failOnStartupError: false —— Pixeval 没开时不影响 DSH 启动，工具先不出现
+#   - reconnect 常驻重试 —— Pixeval 之后启动（或中途重启）能自动接上，约 20s 一轮
+#   - 若 Pixeval 端口改过，只改下面 url 的端口号即可
+- insert:
+    - id: mcp-pixeval
+      name: '@deepseek-ai/dsh-mcp-client'
+      config:
+        serverName: pixeval
+        transport: streamable-http
+        url: http://127.0.0.1:52163/mcp
+        toolCallTimeoutMs: 90000
+        failOnStartupError: false
+        reconnect:
+          enabled: true
+          initialDelayMs: 1000
+          maxDelayMs: 20000
+          maxAttempts: 1000

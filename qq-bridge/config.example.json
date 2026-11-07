@@ -1,0 +1,348 @@
+{
+  "dsh": {
+    "baseUrl": "http://127.0.0.1:3080",
+    "provider": "deepseek-official",
+    "model": "deepseek-flash",
+    "reasoningEffort": "low",
+    "authToken": "",
+    "authHeader": "authorization",
+    "authPrefix": "Bearer",
+    "allowRemote": false
+  },
+  "role": {
+    "maxInjectChars": 6000
+  },
+  "snowluma": {
+    "wsUrl": "ws://127.0.0.1:3001",
+    "httpUrl": "http://127.0.0.1:3000",
+    "accessToken": "",
+    "followDiscoveredEndpoint": true,
+    "silenceWarnMs": 600000,
+    "launcherPath": "",
+    "homeDir": ""
+  },
+  "ownerQQ": null,
+  "sessionCwd": "",
+  "agentPreset": "qq-chat-lite",
+  "workspaceTitle": "QQ 聊天",
+  "allow": {
+    "private": [],
+    "groups": []
+  },
+  "deny": {
+    "private": [],
+    "groups": []
+  },
+  "allowAllWhenEmpty": false,
+  "ackMessage": "",
+  "sendDelayMs": 300,
+  "questionTimeoutMs": 300000,
+  "consolePort": 3100,
+  "consoleToken": "",
+  "pricing": {
+    "models": {
+      "my-relay-model": {
+        "label": "我的中转模型",
+        "off": {
+          "cacheHit": 0.5,
+          "cacheMiss": 3,
+          "output": 9
+        }
+      }
+    }
+  },
+  "security": {
+    "interceptNotify": true
+  },
+  "personMemory": {
+    "enabled": true,
+    "dir": "memory",
+    "injectIndex": true,
+    "injectMax": 12,
+    "injectSummary": true,
+    "injectSummaryMax": 6,
+    "injectSummaryChars": 160,
+    "injectPinnedOnly": true,
+    "injectFocusBody": true,
+    "focusMaxChars": 1500,
+    "focusMaxPeople": 2,
+    "readMaxChars": 3000,
+    "searchLimit": 8,
+    "maxProfiles": 300,
+    "maxProfileChars": 200000
+  },
+  "socialV2": {
+    "enabled": true,
+    "autoReplyCheckMs": 30000,
+    "agentPreset": "qq-chat-lite",
+    "provideRecommendations": true,
+    "wake": {
+      "defaultMode": "diving",
+      "preSleepWaitEnabled": true,
+      "preSleepWaitMs": 300000,
+      "staleChatMinutes": 10,
+      "staleSilentMinutes": 120,
+      "recommendedDefaultInfinite": true,
+      "sleepMinMs": 60000,
+      "sleepMaxMs": 0,
+      "recommendedSleepMinMs": 300000,
+      "recommendedSleepMaxMs": 7200000,
+      "recommendedProbability": 0,
+      "recommendedKeywords": [
+        "小鲸鱼",
+        "DeepSeek",
+        "deepseek",
+        "DS",
+        "D老师",
+        "d老师",
+        "D指导",
+        "d指导",
+        "D师傅",
+        "d师傅",
+        "深度求索",
+        "大肥鱼",
+        "鲸鱼",
+        "DeepSeek V3",
+        "DeepSeek R1",
+        "R1"
+      ],
+      "recommendedAtMention": true,
+      "recommendedNameMention": false,
+      "recommendedQuestion": false,
+      "recommendedPoke": true,
+      "recommendedHint": "群聊默认策略是「一直潜水」（infinite=true，不设时长）：只有被 @、被拍一拍、命中唤醒词时才醒，普通消息不触发、也不做概率唤醒。需要等特定某人/某几人时可设置 triggers.speakerIds。不要自己改成有限时长或打开 anyMessage/question/概率，除非对方明确要求。",
+      "batchWindowMs": 6000,
+      "maxWakePerMinute": 1,
+      "maxWakePerHour": 12,
+      "noActionLimit": 3,
+      "maxWakeConfigReminders": 2
+    },
+    "send": {
+      "burstEnabled": true,
+      "burstMaxMessages": 8,
+      "burstIntervalMinMs": 1000,
+      "burstIntervalMaxMs": 3000,
+      "longGapProbability": 0.2,
+      "longGapMinMs": 5000,
+      "longGapMaxMs": 10000,
+      "maxSendPerMinute": 8,
+      "maxSendPerHour": 60,
+      "maxMessageChars": 500,
+      "maxGapMs": 10000,
+      "gapBaseMs": 800,
+      "gapPerCharMs": 20,
+      "recommendedHint": "单条消息不要用空格断句，中文短句用逗号/顿号或直接连写；分条时每条都要读起来完整，不要把同一句话拆到两条里；普通闲聊建议一次 1~3 条，条间 1~3 秒；讲故事/回忆可以 5~10 秒间隔；不要连续刷屏。"
+    },
+    "wait": {
+      "defaultMs": 30000,
+      "minMs": 5000,
+      "maxMs": 600000,
+      "defaultQuietMs": 8000,
+      "minQuietAfterNewMs": 10000
+    },
+    "sticker": {
+      "enabled": true,
+      "syncTtlMs": 60000,
+      "maxListCount": 100,
+      "includeInPrompt": true,
+      "promptMaxStickers": 8
+    },
+    "voice": {
+      "enabled": false,
+      "dir": "audio",
+      "maxSeconds": 300,
+      "maxBytes": 20971520,
+      "maxPerMinute": 2,
+      "maxPerHour": 10,
+      "allowAbsolutePath": false,
+      "defaultVolume": 1,
+      "loudness": "normal",
+      "ffmpegPath": "",
+      "autoReadback": true,
+      "tts": {
+        "enabled": false,
+        "baseUrl": "http://127.0.0.1:3210",
+        "serviceDir": "",
+        "voice": "dafiyu",
+        "voiceName": "大肥鱼",
+        "timeoutMs": 180000,
+        "maxChars": 120,
+        "marker": "[语音]",
+        "maxPerMinute": 2,
+        "maxPerHour": 10,
+        "cacheDir": "audio/.tts",
+        "keepFiles": 30,
+        "requireAsk": false,
+        "askWindowMs": 1800000
+      }
+    },
+    "image": {
+      "enabled": true,
+      "dirs": [
+        "C:\\Users\\<you>\\Pictures\\绘画参考"
+      ],
+      "selfDirs": [
+        "./assets"
+      ],
+      "maxBytes": 10485760,
+      "maxSendBytes": 12582912,
+      "maxPerMinute": 6,
+      "maxPerHour": 30,
+      "crossTargetPerMinute": 3,
+      "crossTargetPerHour": 20,
+      "minBookmarks": 300,
+      "allowR18": false,
+      "searchCount": 30,
+      "searchWindowYears": 6,
+      "searchWindowTries": 2,
+      "searchContentType": "illust",
+      "searchIncludeAi": false,
+      "preferSinglePage": true,
+      "pixevalMcpUrl": "http://127.0.0.1:52163/mcp",
+      "pixevalSize": "not_cropped"
+    },
+    "proactive": {
+      "enabled": true,
+      "checkIntervalMinMs": 1800000,
+      "checkIntervalMaxMs": 5400000,
+      "idleThresholdMs": 900000,
+      "probability": 0.3
+    },
+    "proactivePrivate": {
+      "enabled": true,
+      "dailyQuota": 2,
+      "activeHours": [
+        9,
+        23
+      ],
+      "minIntervalMs": 14400000,
+      "idleThresholdMs": 7200000,
+      "onlyKnownContacts": true,
+      "backoff": {
+        "enabled": true,
+        "maxMultiplier": 8
+      },
+      "tickMs": 300000
+    },
+    "feedback": {
+      "maxLength": 500,
+      "notifyOwnerOnError": false
+    },
+    "context": {
+      "recentLimit": 100,
+      "unreadLimit": 30,
+      "contextWindow": 20,
+      "wakeMessageLimit": 12,
+      "wakeRecentLimit": 4,
+      "wakeMaxChars": 6000
+    },
+    "initialPromptMaxChars": 2000,
+    "media": {
+      "maxBytes": 8388608,
+      "maxFetchBytes": 16777216,
+      "maxPixels": 64000000,
+      "maxCount": 5,
+      "normalize": true,
+      "maxModelBytes": 1048576,
+      "maxLongEdge": 1280,
+      "gifFrames": 6,
+      "gifTile": 240,
+      "normalizeTimeoutMs": 25000
+    },
+    "liteChat": {
+      "enabled": true,
+      "preset": "qq-chat-lite",
+      "keys": [],
+      "engine": "auto",
+      "thinking": {
+        "private": "low",
+        "group": "low"
+      },
+      "maxTokens": 0,
+      "model": "deepseek-flash",
+      "apiKey": "",
+      "maxMessages": 2,
+      "historyMessages": 36,
+      "groupWakeProbability": 0,
+      "maxImagesPerWake": 1,
+      "maxVoicesPerWake": 1,
+      "maxVideosPerWake": 1,
+      "maxImagesPerReply": 5,
+      "maxPokesPerReply": 1,
+      "maxVoicesPerReply": 1,
+      "stickerMax": 6,
+      "maxStickers": 2,
+      "nativeImages": true,
+      "historyMaxAgeMs": 7200000,
+      "historyMaxChars": 5000,
+      "summaryEnabled": true,
+      "summaryEveryTurns": 8,
+      "summaryMaxChars": 300,
+      "summaryMaxInputMessages": 40
+    },
+    "qzone": {
+      "enabled": true,
+      "_note": "总开关。授权/配额/可见范围等运行策略在控制台「QQ 空间」页维护，落盘于 state/qzone-policy.json（不入库、不需重启）",
+      "aiDraft": {
+        "enabled": true,
+        "_note": "AI 起草说说用的思考强度。high 是默认值：聊天用 low 求快，落笔这条要写给人看。可选 low/high/max",
+        "reasoningEffort": "high",
+        "maxTokens": 4096,
+        "minChars": 20,
+        "maxChars": 120
+      }
+    }
+  },
+  "vision": {
+    "enabled": true,
+    "baseUrl": "https://api.deepseek.com",
+    "model": "deepseek-flash",
+    "apiKey": "",
+    "apiKeyEnv": "IMAGE_PATHIFY_API_KEY",
+    "maxTokens": 2048,
+    "disableThinking": true,
+    "maxImages": 4,
+    "timeoutMs": 90000,
+    "maxPerMinute": 6,
+    "maxPerHour": 60
+  },
+  "voice": {
+    "asr": {
+      "enabled": true,
+      "providerId": "sensevoice-local",
+      "language": "auto",
+      "maxBytes": 4194304,
+      "maxDurationSeconds": 120,
+      "fallbackToQqAsr": true,
+      "timeoutMs": 120000
+    }
+  },
+  "video": {
+    "enabled": true,
+    "maxPerMinute": 4,
+    "maxPerHour": 20,
+    "metaTimeoutMs": 3500,
+    "fetchTimeoutMs": 20000,
+    "maxDurationSeconds": 1800,
+    "asrMaxSeconds": 300,
+    "asrChunkSeconds": 120,
+    "maxAudioBytes": 33554432,
+    "ffmpegPath": "",
+    "transcriptMaxChars": 6000,
+    "commentLimit": 8,
+    "commentMaxChars": 120,
+    "danmakuSample": 30,
+    "includeComments": true,
+    "includeDanmaku": true,
+    "cacheTtlMs": 600000,
+    "cacheMaxEntries": 50,
+    "asr": {
+      "enabled": true
+    },
+    "bilibili": {
+      "cookie": "",
+      "fetchSubtitles": true,
+      "fetchAiSummary": true
+    }
+  }
+}

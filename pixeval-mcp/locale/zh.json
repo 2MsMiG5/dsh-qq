@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Pixeval MCP 连接",
+    "description": "连接本机运行中的 Pixeval 桌面端 MCP 服务（127.0.0.1:52163/mcp），把搜图、排行榜、画师、评论、收藏与下载队列等 49 个工具以 mcp__pixeval__* 暴露给 agent。QQ 聊天会话同样可用。"
+  }
+}

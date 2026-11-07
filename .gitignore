@@ -1,0 +1,55 @@
+# ── dafiyu-voice：大体积/生成物/运行时，绝不入库 ─────────────────────────────
+dafiyu-voice/env/
+dafiyu-voice/models/
+dafiyu-voice/downloads/
+dafiyu-voice/logs/
+dafiyu-voice/tmp/
+dafiyu-voice/out/
+dafiyu-voice/__pycache__/
+dafiyu-voice/.venv/
+dafiyu-voice/ghmeta/
+dafiyu-voice/index-tts/.git/
+dafiyu-voice/.git/
+# 下载/生成的资产与素材（非手写代码）：根目录打包 JS、MP3 源素材
+dafiyu-voice/*.js
+dafiyu-voice/*.mp3
+dafiyu-voice/*.wav
+
+# ── qq-bridge：敏感/运行时/依赖（其自身 .gitignore 也覆盖，这里兜底） ────────
+qq-bridge/node_modules/
+qq-bridge/.npm-cache/
+qq-bridge/state/
+qq-bridge/config.json
+qq-bridge/memory/
+qq-bridge/audio/
+qq-bridge/plugins/qq-agent/cordis.patch.yml
+
+# ── 第三方模型代码（bilibili 模型许可，不随仓库分发；按 README 自行 clone） ──
+dafiyu-voice/index-tts/
+
+# ── 个人语音素材与合成样本（README 声明仅供本机使用，不再分发） ────────────
+dafiyu-voice/ref/
+dafiyu-voice/samples/
+
+# ── 表情包/角色图片素材（第三方同人图，体积大，不入公开仓库） ──────────────
+qq-bridge/assets/
+
+# ── 临时目录与 Python 缓存 ────────────────────────────────────────────────
+tmp/
+qq-bridge/tmp/
+__pycache__/
+*.pyc
+
+# ── 通用 ──────────────────────────────────────────────────────────────────
+*.log
+*.bak
+*.bak-*
+.DS_Store
+Thumbs.db
+
+# 本机聊天归档（含真实聊天内容，绝不入库）
+qq-chat-archive/
+
+# 调试临时文件（根目录 scratch，不入库）
+tmp-*.mjs
+tmp-*.txt

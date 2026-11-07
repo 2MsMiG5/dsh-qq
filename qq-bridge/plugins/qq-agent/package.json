@@ -1,0 +1,19 @@
+{
+  "name": "qq-agent",
+  "version": "0.2.1-r1",
+  "private": true,
+  "description": "qq-bridge 的唯一 DSH bundle：轻量聊天 agent preset（qq-chat-lite）+ 零工具守卫（qq-tool-restrict-lite）+ 模式设置命名空间（qq-mode）+ DSH 启动时拉起 SnowLuma/桥接。2026-10-25 由 qq-mode-console / qq-agent-presets / dsh-snowluma-autostart 三个插件合并而来；2026-10-28 删除一代/二代仿真预设与 QQ MCP 工具面，只保留轻量无工具预设（直连引擎失败时的兜底）。",
+  "type": "module",
+  "license": "MIT",
+  "dsh": {
+    "bundle": {
+      "patch": [
+        "./cordis.patch.yml",
+        "./presets/qq-chat-lite.patch.yml"
+      ]
+    }
+  },
+  "dependencies": {
+    "@deepseek-ai/schemastery": "^3.18.1"
+  }
+}

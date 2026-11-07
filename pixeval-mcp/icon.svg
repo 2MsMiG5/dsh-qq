@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Pixeval MCP connection">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1b2a4a"/>
+      <stop offset="1" stop-color="#0d1526"/>
+    </linearGradient>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7fb2ff"/>
+      <stop offset="1" stop-color="#4a7fe0"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="url(#bg)" stroke="#3d5a8a" stroke-width="2"/>
+  <rect x="13" y="16" width="38" height="30" rx="4" fill="url(#sky)" stroke="#e8f0ff" stroke-width="2.5"/>
+  <circle cx="24" cy="26" r="4" fill="#ffe08a"/>
+  <path d="M14.5 44 L26 32 L34 40 L40 34 L49.5 44 Z" fill="#f2f7ff" opacity="0.92"/>
+  <path d="M20 54 h24" stroke="#e8f0ff" stroke-width="3" stroke-linecap="round"/>
+  <path d="M26 54 v-4 h12 v4" fill="none" stroke="#e8f0ff" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="46" cy="47" r="4.5" fill="#ff6fae" stroke="#0d1526" stroke-width="2"/>
+</svg>

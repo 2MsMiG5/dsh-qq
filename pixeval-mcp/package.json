@@ -1,0 +1,22 @@
+{
+  "name": "@local/pixeval-mcp",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Connects the running Pixeval desktop app's built-in MCP server (127.0.0.1:52163/mcp) as DSH tools named mcp__pixeval__*.",
+  "exports": {
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
