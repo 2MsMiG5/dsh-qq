@@ -1283,8 +1283,6 @@ Copyright (c) 2026 Derpyu520 and qq-bridge / QSH contributors
 
 ### 12.3 数据与素材
 
-- `dafiyu-voice/samples/`、`ref/` 里的参考音取材自第三方应用缓存，**仅供本机个人使用**，已加入 `.gitignore`，不随项目分发。
-- `qq-chat-archive/` 含真实聊天内容（含私聊），**仅保存在本机**，已加入 `.gitignore`。
 - `roles/` 里的人格卡是个人创作，随项目以 MIT 发布；内含的角色梗与设定请自行确认无版权争议。
 
 ---
