@@ -2,7 +2,7 @@
 
 把 QQ 变成一个大模型智能体的聊天界面：QQ 消息进来自动变成 agent 的提示词，agent 的回复、表情包、图片、语音再自动回到 QQ 里。
 
-仓库同时还带了两个配套件：本地零样本 TTS 服务（`dafiyu-voice`）、Pixeval MCP 连接配置（`pixeval-mcp`）。本机聊天归档含真实聊天内容，不入库。
+仓库同时还带了两个配套件：本地零样本 TTS 服务（`dafiyu-voice`）、Pixeval MCP 连接配置（`pixeval-mcp`）。
 
 > 单进程 24/7 常驻 · Node ESM 无框架 · 零工具聊天预设（成本优先）· 控制台可视化运维
 
